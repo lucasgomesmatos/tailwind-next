@@ -1,10 +1,13 @@
 import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Masterizando Tailwind',
   description: 'Aprenda a usar o Tailwind CSS em projetos Next.js',
 };
+
+const inter = Inter({ subsets: ['latin'] });
 
 export default function RootLayout({
   children,
@@ -13,7 +16,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` antialiased`}>{children}</body>
+      <body
+        className={` 
+        ${inter.className}
+        antialiased bg-zinc-800 text-white`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
