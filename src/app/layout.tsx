@@ -19,7 +19,7 @@ export default function RootLayout({
       <body
         className={` 
         ${inter.className}
-        antialiased bg-zinc-800 text-white`}
+        antialiased dark:bg-zinc-950 text-white`}
       >
         {children}
       </body>
