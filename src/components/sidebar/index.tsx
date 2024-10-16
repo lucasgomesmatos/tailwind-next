@@ -4,7 +4,7 @@ import { Logo } from './logo'
 
 export const Sidebar = () => {
   return (
-    <aside className="space-y-6 border-r border-zinc-200 px-5 py-8">
+    <aside className="flex flex-col border-r border-zinc-200 px-5 py-8">
       <Logo />
       <div className="group relative mx-1 flex w-full items-center gap-2 rounded-lg border border-zinc-300 px-3 py-2 shadow-sm transition-colors duration-200 ease-in-out focus-within:border-zinc-400 group-hover:border-zinc-500">
         <Search className="absolute left-2.5 top-2.5 size-5 text-zinc-500" />
@@ -15,6 +15,7 @@ export const Sidebar = () => {
         />
       </div>
       <MainNavigation />
+      <div className="mt-auto"></div>
     </aside>
   )
 }
