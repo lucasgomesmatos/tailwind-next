@@ -20,14 +20,38 @@ export const SettingsTabs = () => {
           value="tab2"
           isSelect={currentValue === 'tab2'}
         />
-        <TabItem title="Password" value="tab3" />
-        <TabItem title="Team" value="tab4" />
-        <TabItem title="Plan" value="tab5" />
-        <TabItem title="Billing" value="tab6" />
-        <TabItem title="Email" value="tab7" />
-        <TabItem title="Notifications" value="tab8" />
-        <TabItem title="Integrations" value="tab9" />
-        <TabItem title="API" value="tab9" />
+        <TabItem
+          title="Password"
+          value="tab3"
+          isSelect={currentValue === 'tab3'}
+        />
+        <TabItem title="Team" value="tab4" isSelect={currentValue === 'tab4'} />
+        <TabItem title="Plan" value="tab5" isSelect={currentValue === 'tab5'} />
+        <TabItem
+          title="Billing"
+          value="tab6"
+          isSelect={currentValue === 'tab6'}
+        />
+        <TabItem
+          title="Email"
+          value="tab7"
+          isSelect={currentValue === 'tab7'}
+        />
+        <TabItem
+          title="Notifications"
+          value="tab8"
+          isSelect={currentValue === 'tab8'}
+        />
+        <TabItem
+          title="Integrations"
+          value="tab9"
+          isSelect={currentValue === 'tab9'}
+        />
+        <TabItem
+          title="API"
+          value="tab10"
+          isSelect={currentValue === 'tab10'}
+        />
       </Tabs.List>
     </Tabs.Root>
   )
