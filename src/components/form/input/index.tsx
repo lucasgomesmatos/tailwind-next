@@ -25,7 +25,7 @@ export const Root = (props: RootProps) => {
   return (
     <div
       {...props}
-      className="group mx-1 flex w-full items-center gap-2 rounded-lg border border-zinc-300 px-3 py-2 shadow-sm transition-colors duration-200 ease-in-out focus-within:border-zinc-400 group-hover:border-zinc-500"
+      className="group flex w-full items-center gap-2 rounded-lg border border-zinc-300 px-3 py-2 shadow-sm transition-colors duration-200 ease-in-out focus-within:border-zinc-400 group-hover:border-zinc-500"
     />
   )
 }
