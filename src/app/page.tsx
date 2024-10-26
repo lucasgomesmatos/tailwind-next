@@ -2,9 +2,10 @@ import * as FileInput from '@/components/form/file-input'
 import * as Input from '@/components/form/input'
 import { Select } from '@/components/form/select'
 import { SelectItem } from '@/components/form/select/select-item'
+import { Textarea } from '@/components/form/textarea'
 import { SettingsTabs } from '@/components/settings-tabs'
 
-import { Mail } from 'lucide-react'
+import { Bold, Italic, Link, List, ListOrdered, Mail } from 'lucide-react'
 
 export default function Home() {
   return (
@@ -70,7 +71,7 @@ export default function Home() {
 
             <Input.Root>
               <Input.Prefix>
-                <Mail className="size-5 text-zinc-500" />
+                <Mail className="size-4 text-zinc-500" strokeWidth={3} />
               </Input.Prefix>
               <Input.Control
                 id="email"
@@ -145,9 +146,55 @@ export default function Home() {
               </span>
             </label>
 
-            <Input.Root>
-              <Input.Control type="file" />
-            </Input.Root>
+            <div className="space-y-3">
+              <div className="grid grid-cols-2 gap-3">
+                <Select placeholder="" defaultValue="normal">
+                  <SelectItem text="Normal text" value="normal" />
+                  <SelectItem text="Markdown" value="markdown" />
+                </Select>
+
+                <div className="flex items-center gap-1">
+                  <button
+                    type="button"
+                    className="rounded-md p-2 hover:bg-zinc-50"
+                  >
+                    <Bold className="size-4 text-zinc-500" strokeWidth={3} />
+                  </button>
+                  <button
+                    type="button"
+                    className="rounded-md p-2 hover:bg-zinc-50"
+                  >
+                    <Italic className="size-4 text-zinc-500" strokeWidth={3} />
+                  </button>
+                  <button
+                    type="button"
+                    className="rounded-md p-2 hover:bg-zinc-50"
+                  >
+                    <Link className="size-4 text-zinc-500" strokeWidth={3} />
+                  </button>
+                  <button
+                    type="button"
+                    className="rounded-md p-2 hover:bg-zinc-50"
+                  >
+                    <List className="size-4 text-zinc-500" strokeWidth={3} />
+                  </button>
+                  <button
+                    type="button"
+                    className="rounded-md p-2 hover:bg-zinc-50"
+                  >
+                    <ListOrdered
+                      className="size-4 text-zinc-500"
+                      strokeWidth={3}
+                    />
+                  </button>
+                </div>
+              </div>
+
+              <Textarea
+                id="bio"
+                defaultValue={`I'm a software engineer with a passion for building products that people love. I'm currently working at a startup in San Francisco, CA. In my free time, I enjoy hiking and playing the guitar.`}
+              />
+            </div>
           </div>
 
           <div className="grid grid-cols-form gap-3 pt-5">
