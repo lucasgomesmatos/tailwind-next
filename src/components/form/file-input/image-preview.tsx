@@ -17,7 +17,7 @@ export const ImagePreview = () => {
   }, [files])
 
   return (
-    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-violet-50">
+    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-violet-50 dark:bg-violet-500/10">
       {previewUrl ? (
         <Image
           src={previewUrl}
@@ -27,7 +27,7 @@ export const ImagePreview = () => {
           height={64}
         />
       ) : (
-        <User className="h-8 w-8 text-violet-500" />
+        <User className="h-8 w-8 text-violet-500 dark:text-violet-300" />
       )}
     </div>
   )
